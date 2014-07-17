@@ -35,7 +35,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>c46e837f-3517-402b-851c-256cdf341c93</ProjectGuid>
+    <ProjectGuid>251d1738-f8b2-42ed-a2a3-5da8d8d836b8</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0'">
@@ -50,7 +50,7 @@
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
     
-    <PackageCertificateKeyFile>Pathfinding_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>aStarPathFinding_TemporaryKey.pfx</PackageCertificateKeyFile>
     
   </PropertyGroup>
   <ItemGroup>
@@ -64,13 +64,13 @@
     <Content Include="images\storelogo.png" />
     <Content Include="css\default.css" />
     
-    <None Include="Pathfinding_TemporaryKey.pfx" />
+    <None Include="aStarPathFinding_TemporaryKey.pfx" />
     
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.WinJS.2.0, Version=1.0" />
   </ItemGroup>
-  <Import Project="..\Pathfinding.Shared\Pathfinding.Shared.projitems" Label="Shared" />
+  <Import Project="..\aStarPathFinding.Shared\aStarPathFinding.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below then uncomment
        that target and the DisableFastUpToDateCheck PropertyGroup. 

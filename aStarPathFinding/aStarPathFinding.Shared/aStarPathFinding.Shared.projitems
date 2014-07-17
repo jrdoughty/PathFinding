@@ -3,9 +3,13 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>afa3bba0-031c-40c5-a151-7a5efe0dffc2</SharedGUID>
+    <SharedGUID>2faa2367-875a-4c7e-914e-93fc7bd2625d</SharedGUID>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)js\crafty.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\default.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\game.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\pathfinding.js" />
+    <Content Include="$(MSBuildThisFileDirectory)sharedimages\brick.png" />
   </ItemGroup>
 </Project>

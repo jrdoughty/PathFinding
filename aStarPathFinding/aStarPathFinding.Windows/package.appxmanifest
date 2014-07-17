@@ -2,12 +2,12 @@
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
 
   <Identity
-    Name="c46e837f-3517-402b-851c-256cdf341c93"
+    Name="251d1738-f8b2-42ed-a2a3-5da8d8d836b8"
     Version="1.0.0.0"
     Publisher="CN=John" />
 
   <Properties>
-    <DisplayName>Pathfinding.Windows</DisplayName>
+    <DisplayName>aStarPathFinding.Windows</DisplayName>
     <PublisherDisplayName>John</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
@@ -27,8 +27,8 @@
       StartPage="default.html">
 
       <m2:VisualElements
-        DisplayName="Pathfinding.Windows"
-        Description="Pathfinding.Windows"
+        DisplayName="aStarPathFinding.Windows"
+        Description="aStarPathFinding.Windows"
         ForegroundText="light"
         BackgroundColor="#464646"
         Square150x150Logo="images\Logo.png"
