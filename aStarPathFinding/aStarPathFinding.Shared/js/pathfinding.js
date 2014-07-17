@@ -28,14 +28,18 @@ function Pathfinder() {
                     Nodes[i + j].neighbors.push([i + 1, j + 1]);
                     Nodes[i + j].neighbors.push([i, j + 1]);
                     Nodes[i + j].neighbors.push([i - 1, j + 1]);
-                    var nodeLength = Nodes[i+j].neighbors.length
-                    for(var k = 0; k < nodeLength;k++)
+                    for(var k = 0; k < Nodes[i+j].neighbors.length;k++)
                     {
-                        if (Nodes[i + j].neighbors[nodeLength - (k+1)][0] < 0 || Nodes[i + j].neighbors[nodeLength - (k+1)][0] > levelWidth - 1)
+                        Nodes[i + j].neighbors[k][0];
+                        if (Nodes[i + j].neighbors[k][0] < 0 || Nodes[i + j].neighbors[k][0] > levelWidth - 1
+                            ||
+                            Nodes[i + j].neighbors[k][1] < 0 || Nodes[i + j].neighbors[k][1] > levelHeight - 1)
                         {
-                            Nodes[i + j].neighbors[nodeLength - k]
+                            delete Nodes[i + j].neighbors[k];
                         }
                     }
+
+                    Nodes[i + j].neighbors = ReIndexArray(Nodes[i + j].neighbors);
                 }
                 else {
                     Nodes.push(Crafty.e("gravel,DOM,Color,TwoDNode")
@@ -50,6 +54,16 @@ function Pathfinder() {
                     Nodes[i + j].neighbors.push([i + 1, j + 1]);
                     Nodes[i + j].neighbors.push([i, j + 1]);
                     Nodes[i + j].neighbors.push([i - 1, j + 1]);
+                    for (var k = 0; k < Nodes[i + j].neighbors.length; k++) {
+                        Nodes[i + j].neighbors[k][0];
+                        if (Nodes[i + j].neighbors[k][0] < 0 || Nodes[i + j].neighbors[k][0] > levelWidth - 1
+                            ||
+                            Nodes[i + j].neighbors[k][1] < 0 || Nodes[i + j].neighbors[k][1] > levelHeight - 1) {
+                            delete Nodes[i + j].neighbors[k];
+                        }
+                    }
+
+                    Nodes[i + j].neighbors = ReIndexArray(Nodes[i + j].neighbors);
                 }
             }
         }
@@ -70,4 +84,16 @@ Crafty.c("TwoDNode",
             return this.g + this.h;
         }
 
-});
+    });
+
+function ReIndexArray(array)
+{
+    array.sort();
+    for (k = 0; k < array.length; k++) {
+        if (array[k] === undefined) {
+            array.length = k;
+            break;
+        }
+    }
+    return array;
+}
