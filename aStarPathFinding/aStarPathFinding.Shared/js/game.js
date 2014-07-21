@@ -21,7 +21,8 @@ Stage.baseYAspect = Stage.stageH / 720;
 
 
 Crafty.init(Stage.stageW, Stage.stageH);
-Crafty.background('#00BFFF');
 
 
 p = new Pathfinder();//pathfinding.js
+p.InitNodesForLevel();
+p.StartPathfindingByPosition([0,0],[40*6,40*14]);
