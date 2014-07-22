@@ -1,6 +1,5 @@
 ﻿"use strict";
 
-
 Crafty.sprite("/sharedimages/brick.png", {
     brick: [0, 0, 40, 40],
     gravel: [40, 0, 40, 40]
@@ -28,7 +27,6 @@ Crafty.c("TwoDNode",
         }
 
     });
-
 
 function Pathfinder(columns, rows) {
     var Nodes = [],
