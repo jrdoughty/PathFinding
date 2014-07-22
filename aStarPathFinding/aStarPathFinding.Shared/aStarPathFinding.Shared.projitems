@@ -11,5 +11,6 @@
     <Content Include="$(MSBuildThisFileDirectory)js\game.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\pathfinding.js" />
     <Content Include="$(MSBuildThisFileDirectory)sharedimages\brick.png" />
+    <Content Include="$(MSBuildThisFileDirectory)sharedimages\colorsquare.png" />
   </ItemGroup>
 </Project>

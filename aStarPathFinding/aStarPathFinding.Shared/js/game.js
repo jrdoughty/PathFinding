@@ -23,6 +23,7 @@ Stage.baseYAspect = Stage.stageH / 720;
 Crafty.init(Stage.stageW, Stage.stageH);
 
 
-p = new Pathfinder();//pathfinding.js
+p = new Pathfinder(32, 18);//pathfinding.js
 p.InitNodesForLevel();
-p.StartPathfindingByPosition([0,0],[40*6,40*14]);
+p.StartPathfindingByGridPosition([0, 0], [12,6]);
+p.StartPathfindingByGridPosition([5, 5], [24,16]);
