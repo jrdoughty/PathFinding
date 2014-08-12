@@ -138,6 +138,7 @@ function Pathfinder(columns, rows) {
                 }
             }
         }
+        return path;
     };
 
     Pathfinder.prototype.StartPathfindingByGridPosition = function (start, end) {
@@ -147,6 +148,7 @@ function Pathfinder(columns, rows) {
         if (openList.length > 0) {
             this.FindPath(end);
         }
+        return path;
     };
 
     Pathfinder.prototype.CalculateHeiristic = function (start, end) {
